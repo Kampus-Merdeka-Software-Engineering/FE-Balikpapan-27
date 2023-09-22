@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: #333;
+}
+.container {
+  padding: 20px;
+  width: 45%;
+  background-color: #d5d4d4;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.subContainer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+.gejala {
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons {
+  padding: 15px;
+}
+.submit,
+.clear {
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s;
+}
+.gejala.clicked,
+.submit.clicked,
+.clear.clicked {
+  background-color: #7ed321;
+  color: #fff;
+}
+/* Gaya untuk hasil diagnosa */
+#resultContainer {
+  display: none;
+  padding: 20px;
+  width: 45%;
+  background-color: #d5d4d4;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  text-align: center; /* Tambahkan alignment ke tengah */
+}
+
+h2 {
+  font-size: 24px; /* Ukuran font untuk judul */
+  color: #333;
+}
+
+p#diagnosisResult {
+  font-size: 18px; /* Ukuran font untuk hasil diagnosa */
+  color: #555555;
+  margin-top: 10px;
+}
+
+/* Gaya untuk bagian About */
+#aboutSection {
+  display: none;
+  padding: 20px;
+  width: 40%;
+  background-color: #f9f5f5;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+#aboutText {
+  font-size: 16px; /* Ukuran font untuk teks "About" */
+  color: #3d3c3c;
+  margin-top: 10px;
+}
+#faktorPenyakit {
+  display: none;
+  padding: 20px;
+  width: 40%;
+  background-color: #f9f5f5;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+#faktorPenyakitText {
+  font-size: 16px;
+  color: #3d3c3c;
+  margin-top: 10px;
+}
+/* Add these styles to make "About" and "Faktor Penyakit" sections side by side */
+.result-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-section {
+  width: calc(50% - 10px); /* Set the width for each section, adjust as needed */
+  margin-top: 20px; /* Add margin-top to separate sections from "Hasil Diagnosis" text */
+}
+.result-container {
+  text-align: center;
+}
+
+form {
+  text-align: left;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Add some spacing between form elements */
+form > * {
+  margin-bottom: 10px;
+}
