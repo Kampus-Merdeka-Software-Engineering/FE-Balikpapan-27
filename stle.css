@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: white;
   color: #f1f0e8;
+  text-decoration: none;
 }
 
 header {
@@ -173,4 +174,67 @@ About
   font-size: 16px;
   color: #666;
   line-height: 1.6;
+}
+
+/* Style untuk formulir */
+
+form {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px 30px;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="button"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Result Style */
+#hasilDiagnosa {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+#informasiPenyakit {
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Footer Style */
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
 }
