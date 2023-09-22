@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Pakar Penyakit Selama Kehamilan</title>
+    <link rel="stylesheet" type="text/css" href="sistemPakarStyle.css" />
+  </head>
+  <body>
+    <h1>Pilih Gejala</h1>
+    <div class="container">
+      <div class="subContainer">
+        <button class="gejala" data-value="G1">Usia hamil 7 bulan / lebih</button>
+        <button class="gejala" data-value="G2">Mual</button>
+        <button class="gejala" data-value="G3">Muntah</button>
+        <button class="gejala" data-value="G4">Kejang</button>
+        <button class="gejala" data-value="G5">Proteinuria lebih dari 3g/liter</button>
+        <button class="gejala" data-value="G6">Tekanan darah >=160/110 mmHg</button>
+        <button class="gejala" data-value="G7">Pusing</button>
+        <button class="gejala" data-value="G8">Nyeri ulu hati</button>
+        <button class="gejala" data-value="G9">Nyeri perut bagian bawah</button>
+        <button class="gejala" data-value="G10">Nyeri perut pada satu sisi kanan/kiri</button>
+        <button class="gejala" data-value="G11">Nyeri hebat tiba-tiba</button>
+        <button class="gejala" data-value="G12">Perdarahan dari jalan lahir</button>
+        <button class="gejala" data-value="G13">Perdarahan dari jalan lahir warna kehitaman</button>
+        <button class="gejala" data-value="G14">Kematian janin</button>
+        <button class="gejala" data-value="G15">Syok</button>
+        <button class="gejala" data-value="G16">Pemeriksaan dinding rahim</button>
+        <button class="gejala" data-value="G17">Tampak pucat</button>
+        <button class="gejala" data-value="G18">Air kencing berwarna kemerahan</button>
+        <button class="gejala" data-value="G19">Tekanan darah turun sampai dibawah 90/60 mmHg</button>
+        <button class="gejala" data-value="G20">Nadi cepat</button>
+        <button class="gejala" data-value="G21">Kontraksi dari rahim</button>
+        <button class="gejala" data-value="G22">Jumlah perdarahan sedikit</button>
+        <button class="gejala" data-value="G23">Produksi urin sedikit</button>
+        <button class="gejala" data-value="G24">Kontraksi Rahim yang hilang</button>
+        <button class="gejala" data-value="G25">Kesadaran menurun</button>
+      </div>
+
+      <div class="buttons">
+        <button class="submit">Submit</button>
+        <button class="clear">Clear</button>
+      </div>
+    </div>
+    <div id="resultContainer" class="result-container">
+      <h2>Hasil Diagnosis</h2>
+      <p id="diagnosisResult"></p>
+      <div class="result-content">
+        <div id="aboutSection" class="result-section">
+          <h2>About</h2>
+          <p id="aboutText"></p>
+        </div>
+        <div id="faktorPenyakit" class="result-section">
+          <h2>Faktor Penyakit</h2>
+          <p id="faktorPenyakitText"></p>
+        </div>
+      </div>
+      <form id="diagnosisForm">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <button type="submit">Kirim Hasil Probabilitas</button>
+      </form>
+    </div>
+    <script src="sistemPakarOp.js"></script>
+  </body>
+</html>
