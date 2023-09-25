@@ -181,6 +181,7 @@ symptomButtons.forEach((button) => {
 const submitButton = document.querySelector(".submit");
 submitButton.addEventListener("click", hitungProbabilitas);
 
+//kirim email
 const diagnosisForm = document.getElementById("diagnosisForm");
 diagnosisForm.addEventListener("submit", function (e) {
   e.preventDefault();
