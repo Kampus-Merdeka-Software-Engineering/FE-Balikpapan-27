@@ -23,19 +23,6 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  /*autoplay: {
-    delay: 2000, // Mengatur waktu tampilan slide (3 detik)
-    disableOnInteraction: false, // Biarkan autoplay berlanjut saat interaksi
-  },
-  // Menambahkan efek hover untuk menghentikan autoplay
-  on: {
-    mouseenter: function () {
-      swiper.autoplay.stop();
-    },
-    mouseleave: function () {
-      swiper.autoplay.start();
-    },
-  },*/
 
   //Responsive Brealpoints
   breakpoints: {
