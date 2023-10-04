@@ -266,7 +266,7 @@ header .container .header__content p {
 #services .container {
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 #services .container article {
