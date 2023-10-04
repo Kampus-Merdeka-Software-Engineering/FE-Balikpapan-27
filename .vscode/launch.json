@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Open blogs.html",
+      "file": "C:\\Users\\ASUS\\revou-27-balikpapan\\front-end-capstone-project-section-balikpapan-group-27\\blogs.html"
+    }
+  ]
+}
