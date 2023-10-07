@@ -35,6 +35,23 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+// email
+
+document.getElementById("email").addEventListener("input", function () {
+  var emailInput = this.value;
+  var emailError = document.getElementById("email-error");
+
+  if (!isValidEmail(emailInput)) {
+    emailError.textContent = "Invalid email address";
+  } else {
+    emailError.textContent = "";
+  }
+});
+
+function isValidEmail(email) {
+  // Validasi sederhana, periksa apakah email mengandung '@' dan '.'
+  return /\S+@\S+\.\S+/.test(email);
+}
 
 // chatbot
 const chatbotToggler = document.querySelector(".chatbot-toggler");
@@ -44,7 +61,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null;
-const API_KEY = "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";
+const API_KEY = "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"; //thiss
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {

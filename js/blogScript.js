@@ -29,19 +29,3 @@ document.addEventListener("DOMContentLoaded", function () {
     likeCountElement.textContent = likeCount.toString(); // Update hitungan like
   }
 });
-
-// fetching News Data From a website providing API
-const apiKey = "e270315436e94d78bd80c6220137b398";
-const fetchData = async (category, pageSize) => {
-  try {
-    const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=${pageSize}&apiKey=${apiKey}`;
-    const data = await fetch(url);
-    const response = await data.json();
-    console.log(response);
-  } catch (error) {
-    console.error("Error fetching news data:", error);
-  }
-};
-
-// Example: Fetch top 5 business news
-fetchData("business", 5);
