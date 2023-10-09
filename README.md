@@ -18,6 +18,7 @@ MomsHealth is an innovative health platform that provides a comprehensive soluti
 
 - **HTML, CSS, JavaScript (JS):** Front-end technologies for building the user interface and enhancing user experience.
 - **MySQL:** Database for storing and managing data.
+- **Railway:** A platform for deploying and managing databases and backend services easily.
 
 ## Testimonials
 
