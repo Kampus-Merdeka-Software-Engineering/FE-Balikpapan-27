@@ -35,7 +35,6 @@ fetchDoctor()
 const sendAppointment = async () => {
     let nama = document.getElementById("input-appointment-name")
     let telp = document.getElementById("input-appointment-phone")
-    //const email = document.getElementById("input-appointment-email").value
     let tanggal = document.getElementById("input-appointment-date")
     let dokter = document.getElementById("input-appointment-doctor")
     let pesan = document.getElementById("input-appointment-message")
@@ -60,7 +59,7 @@ const sendAppointment = async () => {
         })
 
         if (sendAppointment.ok) {
-            alert('Data berhasil dikirim')
+            alert('Successfully create an appointment!')
             nama.value = ""
             telp.value = ""
             tanggal.value = ""
