@@ -1,16 +1,15 @@
 const baseURL = "https://be-balikpapan-27-production.up.railway.app";
 
 const fetchDoctor = async () => {
-    const response = await fetch(`${baseURL}/doctor`)
-    const data = await response.json()
+  const response = await fetch(`${baseURL}/doctor`);
+  const data = await response.json();
 
-    const doctorContainer = document.getElementById("doctor-from-api")
+  const doctorContainer = document.getElementById("doctor-from-api");
 
-    data.data.forEach (item => {
-        const newDoctor = document.createElement('article')
-        //newDoctor.classList.add('doctor')
-        newDoctor.innerHTML = 
-            `<div class="specialist__image">
+  data.data.forEach((item) => {
+    const newDoctor = document.createElement("article");
+    //newDoctor.classList.add('doctor')
+    newDoctor.innerHTML = `<div class="specialist__image">
                 <img src="${item.foto}" alt="Spcecialist One"/>
             </div>
             <div class="specialist__details">
@@ -23,14 +22,13 @@ const fetchDoctor = async () => {
                 <a href="https://facebook.com" target="_blank"><i class="bx bxl-facebook"></i></a>
                 <a href="https://www.instagram.com/fixvita" target="_blank"><i class="bx bxl-instagram"></i></a>
             </div>
-            <a href="https://api.whatsapp.com/send?phone=+6289690744106" class="specialist__whatsapp" target="_blank"><i class="bx bxl-whatsapp"></i></a>`
+            <a href="https://api.whatsapp.com/send?phone=+6289690744106" class="specialist__whatsapp" target="_blank"><i class="bx bxl-whatsapp"></i></a>`;
 
-        doctorContainer.appendChild(newDoctor)
-    })
-}
+    doctorContainer.appendChild(newDoctor);
+  });
+};
 
-fetchDoctor()
-
+fetchDoctor();
 
 const sendAppointment = async () => {
     let nama = document.getElementById("input-appointment-name")
@@ -39,44 +37,39 @@ const sendAppointment = async () => {
     let dokter = document.getElementById("input-appointment-doctor")
     let pesan = document.getElementById("input-appointment-message")
 
-    console.log(tanggal)
+  try {
+    const tanggalISO = new Date(tanggal.value).toISOString();
+    const sendAppointment = await fetch(`${baseURL}/appointment/create`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nama: nama.value,
+        telp: telp.value,
+        tanggal: tanggalISO,
+        dokter: dokter.value,
+        pesan: pesan.value,
+      }),
+    });
 
-    try {
-        const tanggalISO = new Date(tanggal.value).toISOString();
-        console.log(tanggalISO)
-        const sendAppointment = await fetch(`${baseURL}/appointment/create`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ 
-                nama: nama.value, 
-                telp: telp.value, 
-                tanggal: tanggalISO, 
-                dokter: dokter.value,
-                pesan: pesan.value 
-            })
-        })
-
-        if (sendAppointment.ok) {
-            alert('Successfully create an appointment!')
-            nama.value = ""
-            telp.value = ""
-            tanggal.value = ""
-            dokter.value = ""
-            pesan.value = ""
-            
-        } else {
-            console.error('Gagal mengirim data:', sendAppointment.statusText)
-        }
-
-    } catch (error) {
-        console.error('Gagal mengirim data:', error)
+    if (sendAppointment.ok) {
+      alert("Successfully create an appointment!");
+      nama.value = "";
+      telp.value = "";
+      tanggal.value = "";
+      dokter.value = "";
+      pesan.value = "";
+    } else {
+      console.error("Gagal mengirim data:", sendAppointment.statusText);
     }
-}
+  } catch (error) {
+    console.error("Gagal mengirim data:", error);
+  }
+};
 
-const form = document.getElementById("form")
+const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
-    event.preventDefault()
-    sendAppointment()
-})
+  event.preventDefault();
+  sendAppointment();
+});

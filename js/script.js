@@ -37,24 +37,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 //aos
 
-// email
-
-document.getElementById("email").addEventListener("input", function () {
-  var emailInput = this.value;
-  var emailError = document.getElementById("email-error");
-
-  if (!isValidEmail(emailInput)) {
-    emailError.textContent = "Invalid email address";
-  } else {
-    emailError.textContent = "";
-  }
-});
-
-function isValidEmail(email) {
-  // Validasi sederhana, periksa apakah email mengandung '@' dan '.'
-  return /\S+@\S+\.\S+/.test(email);
-}
-
 // chatbot
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
@@ -63,7 +45,9 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null;
-const API_KEY = "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"; //change this in to new API KEY
+//const API_KEY = "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"; // this
+//let API_KEY = process.env.API_KEY;
+
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -83,7 +67,7 @@ const generateResponse = (chatElement) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${API_KEY}`,
+      Authorization: `Bearer ${process.env.API_KEY}`,
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
