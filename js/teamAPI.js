@@ -15,7 +15,7 @@ const fetchTeam = async () => {
               <i class="verify fas fa-check-circle"></i>
               <div class="logo-container">
                 <img class="heart-logo" src="${item.logo_universitas}" alt="UNDIP Logo" />
-                
+
               </div>
             </div>
   
