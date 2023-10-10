@@ -35,6 +35,8 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+//aos
+
 // email
 
 document.getElementById("email").addEventListener("input", function () {
