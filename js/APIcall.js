@@ -31,17 +31,14 @@ const fetchDoctor = async () => {
 fetchDoctor();
 
 const sendAppointment = async () => {
-  let nama = document.getElementById("input-appointment-name");
-  let telp = document.getElementById("input-appointment-phone");
-  let tanggal = document.getElementById("input-appointment-date");
-  let dokter = document.getElementById("input-appointment-doctor");
-  let pesan = document.getElementById("input-appointment-message");
-
-  console.log(tanggal);
+    let nama = document.getElementById("input-appointment-name")
+    let telp = document.getElementById("input-appointment-phone")
+    let tanggal = document.getElementById("input-appointment-date")
+    let dokter = document.getElementById("input-appointment-doctor")
+    let pesan = document.getElementById("input-appointment-message")
 
   try {
     const tanggalISO = new Date(tanggal.value).toISOString();
-    console.log(tanggalISO);
     const sendAppointment = await fetch(`${baseURL}/appointment/create`, {
       method: "POST",
       headers: {
