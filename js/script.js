@@ -24,7 +24,7 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 
-  //Responsive Brealpoints
+  //Responsive Breakpoints
   breakpoints: {
     //width >= 600px
     600: {
